@@ -1,15 +1,19 @@
+
+
+#ejemplo de entrada =     1  2  9  0
+#Ejemplo de salida =    1  2  10
 print("Add the numbers: ")
 x = False
 y = False
 i = 2
 j = 0
-lista = []
+listaPrinc = []
 listaF = [1]
 
 while x == False and y == False:
     n = int(input())
     if n >= 1 and n <= 1500:
-        lista.append(n)
+        listaPrinc.append(n)
     elif n == 0:
         x = True
     else:
@@ -17,20 +21,25 @@ while x == False and y == False:
         y = True
 
 if y == False:
-    while len(listaF) < max(lista):
+    while len(listaF) < max(listaPrinc):
         d = 2
-        feo = False
+        malo = False
         cont = 0
         while d <= i:
             if i % 2 == 0 or i % 3 == 0 or i % 5 == 0:
-                feo = True
+                malo = True
             elif i % d == 0:
                 cont = cont + 1
             d = d + 1
-        if feo == True and cont < 2:
+        if malo == True and cont < 2:
             listaF.append(i)
         i = i + 1
 
 print()
-for j in range(0,len(lista)):
-    print("[",listaF[lista[j] - 1],"]",end = "")
+for j in range(0,len(listaPrinc)):
+    print("[",listaF[listaPrinc[j] - 1],"]",end = "")
+
+
+
+
+
